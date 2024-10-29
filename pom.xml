@@ -17,7 +17,6 @@
   </properties>
 
   <dependencies>
-    <!-- JUnit for testing -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -25,7 +24,6 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- Servlet API for Tomcat 10+ -->
     <dependency>
         <groupId>jakarta.servlet</groupId>
         <artifactId>jakarta.servlet-api</artifactId>
@@ -33,14 +31,12 @@
         <scope>provided</scope>
     </dependency>
 
-    <!-- Commons CSV -->
     <dependency>
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-csv</artifactId>
         <version>1.10.0</version>
     </dependency>
 
-    <!-- MySQL Driver (JDBC) -->
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
@@ -62,7 +58,6 @@
                     <manifest>
                         <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                         <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-                        <!-- Remove mainClass since it's not needed for a WAR file -->
                     </manifest>
                 </archive>
             </configuration>
