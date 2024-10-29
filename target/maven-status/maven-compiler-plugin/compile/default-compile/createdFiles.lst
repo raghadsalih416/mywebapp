@@ -1,0 +1,4 @@
+com/example/mywebapp/SendResetLinkServlet.class
+com/example/mywebapp/FileUploadServlet.class
+com/example/mywebapp/SubmitStudentDataServlet.class
+com/example/mywebapp/ResetPasswordServlet.class

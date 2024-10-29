@@ -1,0 +1,52 @@
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" 
+        "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <display-name>My Web App</display-name>
+
+    <welcome-file-list>
+        <welcome-file>home.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Servlet for handling student data submission -->
+    <servlet>
+        <servlet-name>SubmitStudentDataServlet</servlet-name>
+        <servlet-class>com.example.mywebapp.SubmitStudentDataServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SubmitStudentDataServlet</servlet-name>
+        <url-pattern>/submitStudentData</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet for handling file uploads -->
+    <servlet>
+        <servlet-name>FileUploadServlet</servlet-name>
+        <servlet-class>com.example.mywebapp.FileUploadServlet</servlet-class>
+        <multipart-config>
+            <location>/tmp</location> <!-- Directory where temporary files are stored -->
+            <max-file-size>10485760</max-file-size> <!-- 10MB -->
+            <max-request-size>52428800</max-request-size> <!-- 50MB -->
+            <file-size-threshold>5242880</file-size-threshold> <!-- 5MB -->
+        </multipart-config>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FileUploadServlet</servlet-name>
+        <url-pattern>/upload</url-pattern> <!-- URL pattern for file upload -->
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>ResetPasswordServlet</servlet-name>
+    <servlet-class>com.example.mywebapp.ResetPasswordServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ResetPasswordServlet</servlet-name>
+    <url-pattern>/resetPassword</url-pattern>
+</servlet-mapping>
+
+
+</web-app>
