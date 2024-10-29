@@ -52,6 +52,7 @@
         <version>3.3.1</version>
         <configuration>
           <failOnMissingWebXml>false</failOnMissingWebXml> <!-- If you don't have a web.xml -->
+          <warSourceDirectory>src/main/webapp</warSourceDirectory> <!-- Make sure this points to your web app directory -->
         </configuration>
       </plugin>
     </plugins>
