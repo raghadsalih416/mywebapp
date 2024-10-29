@@ -39,14 +39,14 @@
         <url-pattern>/upload</url-pattern> <!-- URL pattern for file upload -->
     </servlet-mapping>
 
+    <!-- Servlet for resetting passwords -->
     <servlet>
-    <servlet-name>ResetPasswordServlet</servlet-name>
-    <servlet-class>com.example.mywebapp.ResetPasswordServlet</servlet-class>
-</servlet>
-<servlet-mapping>
-    <servlet-name>ResetPasswordServlet</servlet-name>
-    <url-pattern>/resetPassword</url-pattern>
-</servlet-mapping>
-
+        <servlet-name>ResetPasswordServlet</servlet-name>
+        <servlet-class>com.example.mywebapp.ResetPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ResetPasswordServlet</servlet-name>
+        <url-pattern>/resetPassword</url-pattern>
+    </servlet-mapping>
 
 </web-app>
