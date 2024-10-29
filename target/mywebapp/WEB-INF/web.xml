@@ -28,7 +28,7 @@
         <servlet-name>FileUploadServlet</servlet-name>
         <servlet-class>com.example.mywebapp.FileUploadServlet</servlet-class>
         <multipart-config>
-            <location>/tmp</location> <!-- Directory where temporary files are stored -->
+            <location>/tmp</location> <!-- Directory for temporary files -->
             <max-file-size>10485760</max-file-size> <!-- 10MB -->
             <max-request-size>52428800</max-request-size> <!-- 50MB -->
             <file-size-threshold>5242880</file-size-threshold> <!-- 5MB -->
@@ -36,7 +36,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>FileUploadServlet</servlet-name>
-        <url-pattern>/upload</url-pattern> <!-- URL pattern for file upload -->
+        <url-pattern>/upload</url-pattern>
     </servlet-mapping>
 
     <!-- Servlet for resetting passwords -->
@@ -48,5 +48,4 @@
         <servlet-name>ResetPasswordServlet</servlet-name>
         <url-pattern>/resetPassword</url-pattern>
     </servlet-mapping>
-
 </web-app>
